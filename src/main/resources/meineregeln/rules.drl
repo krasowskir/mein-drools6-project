@@ -1,7 +1,7 @@
 package meineregeln.rules
 
-import org.drools.devguide.eshop.model.Item;
-import org.drools.devguide.eshop.model.Item.Category;
+import org.richard.buero.Item;
+import org.richard.buero.Item.Category;
 
 rule "Classify Item - Low Range"
     when
