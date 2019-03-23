@@ -1,0 +1,17 @@
+package meineregeln.rules
+
+import org.richard.buero.Item;
+import org.richard.buero.Item.Category;
+import org.richard.buero.Order;
+import org.richard.buero.Customer;
+import org.richard.buero.Coupon;
+
+rule "create coupons for silver customer"
+when
+    $o: Order($customer: customer)
+    and
+    $c: Customer(this == $customer, category == Customer.Category.SILVER)
+
+then
+    insert(new Coupon($c, $o, Coupon.CouponType.POINTS));
+end
