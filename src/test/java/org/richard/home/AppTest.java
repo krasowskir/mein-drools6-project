@@ -1,4 +1,4 @@
-package rg.drools.devguide;
+package org.richard.home;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
